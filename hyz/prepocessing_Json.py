@@ -22,3 +22,14 @@ def get_meanSpeed(data):
         return meanSpeed
     else:
         return 0
+
+def get_maxSpeed(data):
+    speedlist = []
+    if 'records' in data:
+        for i in range(len(data['records'])):
+            if 'speed' in data['records'][i]:
+                speedlist.append(data['records'][i]['speed'])
+    if len(speedlist) != 0:
+        return max(speedlist)
+    else:
+        return 0

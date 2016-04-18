@@ -15,3 +15,6 @@ for filename in glob.glob(os.path.join(path, '*.json')):
 
 for i in range(len(data)):
     print Pre.get_meanSpeed(data[i])
+
+for i in range(len(data)):
+    print Pre.get_maxSpeed(data[i])
